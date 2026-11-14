@@ -5,11 +5,16 @@ Pilot website for Kuwait: discover and book local activities, compare everyday s
 
 | Part | Where | Tech |
 |---|---|---|
-| Website (Arabic/English, RTL, mobile) | `web/` | Vite, React 19, TypeScript, supabase-js |
+| Website (Arabic/English, RTL, mobile) | `web/` | Vite, React 19, TypeScript, supabase-js; hosted on Replit (static `web/dist`) |
 | Database, auth, row-level security, atomic booking | `supabase/migrations/` | Supabase Postgres + Auth |
 | Sign-up endpoint, AI planner endpoint | `supabase/functions/` | Supabase Edge Functions (Deno) |
 
 Supabase project: `maydan` (ref `awkgbpkihfyothhxuaki`, region ap-south-1, free plan).
+
+## Design
+
+`PRODUCT.md` holds product truth; `.impeccable/surfaces/` holds the home page's design direction (the co-op weekly sheet).
+Type: self-hosted Urbanist (Latin) and Readex Pro (Arabic). Colours are the pinned brand colours.
 
 ## Run locally
 

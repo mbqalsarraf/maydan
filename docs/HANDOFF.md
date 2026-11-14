@@ -2,10 +2,11 @@
 
 ## Live URL
 
-**https://maydan-kw.onrender.com** (Render static site `maydan-kw`, auto-deploys from `main` of the private repo
-`github.com/mbqalsarraf/maydan`). Verified after deploy: the page opens without a session, Explore and Services load live
-data, no console errors, and the bundle contains no secret keys. The sign-up, booking and host flows were clicked through
-on the local build only, not yet on this URL.
+Hosted on **Replit** (static deployment of `web/dist`, synced from `main` of the public repo
+`github.com/mbqalsarraf/maydan`). The URL is in the Replit app's Deployments tab and in the session report.
+The older Render site (`maydan-kw.onrender.com`) still auto-deploys from `main` until its owner deletes it in Render.
+
+To update the live site: push to `main`, then in Replit pull from GitHub and press Republish.
 
 ## Verified (actually run)
 
@@ -44,7 +45,7 @@ on the local build only, not yet on this URL.
 ## Feature 1 submission: discover and register
 
 - **Purpose:** a resident chooses a published session and gets a saved reservation with a unique reference; availability updates for everyone.
-- **Click path:** Explore → "Family Pottery Morning" → View and reserve → choose "Fri 20 Nov, 10:00" → Who is taking part → Continue → Confirm reservation → reference appears → View My Bookings.
+- **Click path:** Home → "Find something this weekend" (or the "Family Pottery Morning" row on the home page's weekly sheet) → "Family Pottery Morning" → View and reserve → choose "Fri 20 Nov, 10:00" → Who is taking part → Continue → Confirm reservation → reference appears → View My Bookings.
 - **Exact seeded workshop title:** `Family Pottery Morning` (adults-only test: `Sourdough Baking Workshop (Adults)`).
 - **Test steps:**
   1. Create an account (Sign in → "New here? Create an account").
