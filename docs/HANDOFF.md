@@ -2,8 +2,10 @@
 
 ## Live URL
 
-**Not deployed to a public URL yet.** The backend (database, auth, functions) is live on Supabase; the website has only
-been run locally against it. Publishing needs the owner's approval to push the code to a Git host (see "To finish").
+**https://maydan-kw.onrender.com** (Render static site `maydan-kw`, auto-deploys from `main` of the private repo
+`github.com/mbqalsarraf/maydan`). Verified after deploy: the page opens without a session, Explore and Services load live
+data, no console errors, and the bundle contains no secret keys. The sign-up, booking and host flows were clicked through
+on the local build only, not yet on this URL.
 
 ## Verified (actually run)
 
@@ -25,7 +27,6 @@ been run locally against it. Publishing needs the owner's approval to push the c
 
 ## Not verified
 
-- **Public deployment** (nothing is hosted publicly).
 - **Real AI call**: the endpoint is deployed but `ANTHROPIC_API_KEY` is not set, so no successful model call has been made.
   AI mode must be treated as unverified until one succeeds.
 - **XE rates**: not implemented. Only `disabled` and `demo` modes exist; the `xe` mode has a data slot but no adapter.
@@ -36,8 +37,7 @@ been run locally against it. Publishing needs the owner's approval to push the c
 
 ## To finish
 
-1. Approve pushing `~/maydan` to a private GitHub repository and creating a static site on Render
-   (build `cd web && npm ci && npm run build`, publish `web/dist`, env `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`).
+1. Click through sign-up, a reservation and the host dashboard (including the QR code) on the live URL.
 2. Add `ANTHROPIC_API_KEY` in Supabase → Edge Functions → Secrets, then run one AI plan.
 3. Re-run the three check commands in the README against the deployed site.
 
