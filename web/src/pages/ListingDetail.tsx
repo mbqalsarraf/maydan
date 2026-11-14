@@ -57,7 +57,7 @@ export default function ListingDetail() {
   useEffect(() => { if (eligibleBands.length && !eligibleBands.includes(band)) setBand(eligibleBands[0]) }, [eligibleBands, band])
 
   if (state === 'loading') return <p className="muted" aria-live="polite">{L('Loading…', 'جارٍ التحميل…')}</p>
-  if (state === 'missing' || !listing) return <p>{L('This listing is not available.', 'هذا النشاط غير متاح.')} <Link to="/">{L('Back to Explore', 'العودة إلى استكشف')}</Link></p>
+  if (state === 'missing' || !listing) return <p>{L('This listing is not available.', 'هذا النشاط غير متاح.')} <Link to="/explore">{L('Back to Explore', 'العودة إلى استكشف')}</Link></p>
 
   const isService = listing.type === 'service'
   const free = (o: Occurrence) => o.booked_count < o.capacity
@@ -88,7 +88,7 @@ export default function ListingDetail() {
 
   return (
     <article className="detail">
-      <p><Link to={isService ? '/services' : '/'}>← {isService ? L('All services', 'كل الخدمات') : L('All activities', 'كل الأنشطة')}</Link></p>
+      <p><Link to={isService ? '/services' : '/explore'}>← {isService ? L('All services', 'كل الخدمات') : L('All activities', 'كل الأنشطة')}</Link></p>
       <div className="tags">
         <span className="tag">{label(listing.type)}</span><span className="tag">{label(listing.category)}</span>
         {listing.is_flexible && <span className="tag flex">{L('Flexible · online', 'مرن · عبر الإنترنت')}</span>}

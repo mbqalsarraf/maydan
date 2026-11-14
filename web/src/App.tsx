@@ -1,6 +1,7 @@
 import { HashRouter, NavLink, Route, Routes, Link } from 'react-router-dom'
 import { AppProvider, supabase, useApp } from './lib/app'
 import { CURRENCIES, type Currency } from './lib/types'
+import Home from './pages/Home'
 import Explore from './pages/Explore'
 import ListingDetail from './pages/ListingDetail'
 import Bookings from './pages/Bookings'
@@ -35,7 +36,7 @@ function Shell() {
           </div>
         </div>
         <nav className="nav" aria-label={L('Main', 'الرئيسية')}>
-          <NavLink to="/" end>{L('Explore', 'استكشف')}</NavLink>
+          <NavLink to="/explore">{L('Explore', 'استكشف')}</NavLink>
           <NavLink to="/services">{L('Services', 'الخدمات')}</NavLink>
           <NavLink to="/plan">{L('My Plan', 'خطتي')}</NavLink>
           <NavLink to="/bookings">{L('My Bookings', 'حجوزاتي')}</NavLink>
@@ -48,14 +49,15 @@ function Shell() {
       </div>
       <main id="main" className="page">
         <Routes>
-          <Route path="/" element={<Explore />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/listing/:id" element={<ListingDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/plan" element={<Plan />} />
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/host" element={<HostDashboard />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="*" element={<p>{L('Page not found.', 'الصفحة غير موجودة.')} <Link to="/">{L('Go to Explore', 'اذهب إلى استكشف')}</Link></p>} />
+          <Route path="*" element={<p>{L('Page not found.', 'الصفحة غير موجودة.')} <Link to="/explore">{L('Go to Explore', 'اذهب إلى استكشف')}</Link></p>} />
         </Routes>
       </main>
       <footer className="foot">

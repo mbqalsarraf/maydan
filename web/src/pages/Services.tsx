@@ -153,11 +153,11 @@ export default function Services() {
             </>
           ) : (
             <p>{L('Your quote', 'عرضك')}: <strong>{money(quote, cur)}</strong> · {L('Reported range (25th–75th percentile)', 'النطاق المُبلَّغ عنه (المئين 25–75)')}:{' '}
-              <strong>{money(result.p25!, cur)} – {money(result.p75!, cur)}</strong></p>
+              <strong><bdi>{money(result.p25!, cur)}</bdi> – <bdi>{money(result.p75!, cur)}</bdi></strong></p>
           )}
           <dl className="facts wide">
             <div><dt>{L('Comparable reports used', 'البلاغات المستخدمة')}</dt><dd>{result.n}</dd></div>
-            {result.n > 0 && <div><dt>{L('Lowest – highest reported', 'الأدنى – الأعلى')}</dt><dd>{money(result.min!, cur)} – {money(result.max!, cur)}</dd></div>}
+            {result.n > 0 && <div><dt>{L('Lowest – highest reported', 'الأدنى – الأعلى')}</dt><dd><bdi>{money(result.min!, cur)}</bdi> – <bdi>{money(result.max!, cur)}</bdi></dd></div>}
             {result.n > 0 && <div><dt>{L('Report dates', 'تواريخ البلاغات')}</dt><dd dir="ltr">{result.dateFrom} → {result.dateTo}</dd></div>}
             <div><dt>{L('Source type', 'نوع المصدر')}</dt>
               <dd>{L(`${result.sources.demo_sample} sample (synthetic) · ${result.sources.self_reported} self-reported (unverified)`,

@@ -43,7 +43,7 @@ export default function Bookings() {
       {error && <p className="error" role="alert">{error}</p>}
       {!rows && !error && <p className="muted" aria-live="polite">{L('Loading your bookings…', 'جارٍ تحميل حجوزاتك…')}</p>}
       {rows && rows.length === 0 && (
-        <p className="empty">{L('You have no bookings yet.', 'لا توجد حجوزات بعد.')} <Link to="/">{L('Explore activities', 'استكشف الأنشطة')}</Link></p>
+        <p className="empty">{L('You have no bookings yet.', 'لا توجد حجوزات بعد.')} <Link to="/explore">{L('Explore activities', 'استكشف الأنشطة')}</Link></p>
       )}
       <ul className="cards">
         {rows?.map(r => {

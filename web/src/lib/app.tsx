@@ -109,9 +109,9 @@ export function Price({ amount, currency: cur }: { amount: number; currency: str
   const conv = cur === currency ? null : convert(amount, cur, currency)
   return (
     <span className="price">
-      {money(amount, cur)}
+      <bdi>{money(amount, cur)}</bdi>
       {conv !== null && (
-        <span className="approx"> ≈ {money(conv, currency)}{' '}
+        <span className="approx"> ≈ <bdi>{money(conv, currency)}</bdi>{' '}
           <small>({fxMode === 'demo' ? L('illustrative demo rate', 'سعر صرف توضيحي') : L('converted', 'محوّل')})</small>
         </span>
       )}
