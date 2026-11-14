@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T00:00:00Z",
+  "title": "Design System: Maydan | ميدان",
+  "extensions": {
+    "colorMeta": {
+      "forest-green": { "role": "primary", "displayName": "Forest Green", "canonical": "oklch(33.6% 0.049 174)", "tonalRamp": ["oklch(15% 0.018 174)", "oklch(25% 0.027 174)", "oklch(35% 0.035 174)", "oklch(48% 0.047 174)", "oklch(60% 0.040 174)", "oklch(72% 0.029 174)", "oklch(84% 0.019 174)", "oklch(95% 0.009 174)"] },
+      "press-green": { "role": "primary", "displayName": "Press Green", "canonical": "oklch(41.4% 0.059 176)", "tonalRamp": ["oklch(15% 0.022 176)", "oklch(25% 0.032 176)", "oklch(35% 0.043 176)", "oklch(48% 0.057 176)", "oklch(60% 0.049 176)", "oklch(72% 0.036 176)", "oklch(84% 0.023 176)", "oklch(95% 0.011 176)"] },
+      "sand": { "role": "secondary", "displayName": "Sand", "canonical": "oklch(68.0% 0.075 81)", "tonalRamp": ["oklch(15% 0.027 81)", "oklch(25% 0.041 81)", "oklch(35% 0.055 81)", "oklch(48% 0.072 81)", "oklch(60% 0.061 81)", "oklch(72% 0.045 81)", "oklch(84% 0.029 81)", "oklch(95% 0.014 81)"] },
+      "umber-label": { "role": "secondary", "displayName": "Umber Label", "canonical": "oklch(45.7% 0.068 80)", "tonalRamp": ["oklch(15% 0.025 80)", "oklch(25% 0.037 80)", "oklch(35% 0.049 80)", "oklch(48% 0.065 80)", "oklch(60% 0.055 80)", "oklch(72% 0.041 80)", "oklch(84% 0.026 80)", "oklch(95% 0.012 80)"] },
+      "ivory-newsprint": { "role": "neutral", "displayName": "Ivory Newsprint", "canonical": "oklch(95.6% 0.011 85)", "tonalRamp": ["oklch(15% 0.004 85)", "oklch(25% 0.006 85)", "oklch(35% 0.008 85)", "oklch(48% 0.011 85)", "oklch(60% 0.009 85)", "oklch(72% 0.007 85)", "oklch(84% 0.004 85)", "oklch(95% 0.002 85)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(98.0% 0.009 85)", "tonalRamp": ["oklch(15% 0.003 85)", "oklch(25% 0.005 85)", "oklch(35% 0.006 85)", "oklch(48% 0.008 85)", "oklch(60% 0.007 85)", "oklch(72% 0.005 85)", "oklch(84% 0.003 85)", "oklch(95% 0.002 85)"] },
+      "charcoal-ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "oklch(26.5% 0.006 157)", "tonalRamp": ["oklch(15% 0.002 157)", "oklch(25% 0.003 157)", "oklch(35% 0.004 157)", "oklch(48% 0.005 157)", "oklch(60% 0.005 157)", "oklch(72% 0.003 157)", "oklch(84% 0.002 157)", "oklch(95% 0.001 157)"] },
+      "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "oklch(46.2% 0.009 139)", "tonalRamp": ["oklch(15% 0.003 139)", "oklch(25% 0.005 139)", "oklch(35% 0.007 139)", "oklch(48% 0.009 139)", "oklch(60% 0.008 139)", "oklch(72% 0.006 139)", "oklch(84% 0.004 139)", "oklch(95% 0.002 139)"] },
+      "sand-rule": { "role": "neutral", "displayName": "Sand Rule", "canonical": "oklch(82.0% 0.037 85)", "tonalRamp": ["oklch(15% 0.013 85)", "oklch(25% 0.020 85)", "oklch(35% 0.027 85)", "oklch(48% 0.035 85)", "oklch(60% 0.030 85)", "oklch(72% 0.022 85)", "oklch(84% 0.014 85)", "oklch(95% 0.007 85)"] },
+      "sand-wash": { "role": "neutral", "displayName": "Sand Wash", "canonical": "oklch(89.7% 0.032 85)", "tonalRamp": ["oklch(15% 0.012 85)", "oklch(25% 0.017 85)", "oklch(35% 0.023 85)", "oklch(48% 0.031 85)", "oklch(60% 0.026 85)", "oklch(72% 0.019 85)", "oklch(84% 0.012 85)", "oklch(95% 0.006 85)"] },
+      "field-stroke": { "role": "neutral", "displayName": "Field Stroke", "canonical": "oklch(62.8% 0.025 87)", "tonalRamp": ["oklch(15% 0.009 87)", "oklch(25% 0.014 87)", "oklch(35% 0.018 87)", "oklch(48% 0.024 87)", "oklch(60% 0.020 87)", "oklch(72% 0.015 87)", "oklch(84% 0.009 87)", "oklch(95% 0.005 87)"] },
+      "warn-wash": { "role": "neutral", "displayName": "Warn Wash", "canonical": "oklch(93.3% 0.035 87)", "tonalRamp": ["oklch(15% 0.013 87)", "oklch(25% 0.019 87)", "oklch(35% 0.026 87)", "oklch(48% 0.034 87)", "oklch(60% 0.029 87)", "oklch(72% 0.021 87)", "oklch(84% 0.013 87)", "oklch(95% 0.006 87)"] },
+      "ok-green": { "role": "state", "displayName": "OK Green", "canonical": "oklch(43.7% 0.078 163)", "tonalRamp": ["oklch(15% 0.028 163)", "oklch(25% 0.043 163)", "oklch(35% 0.057 163)", "oklch(48% 0.075 163)", "oklch(60% 0.064 163)", "oklch(72% 0.047 163)", "oklch(84% 0.030 163)", "oklch(95% 0.014 163)"] },
+      "danger-brick": { "role": "state", "displayName": "Danger Brick", "canonical": "oklch(46.3% 0.149 30)", "tonalRamp": ["oklch(15% 0.054 30)", "oklch(25% 0.081 30)", "oklch(35% 0.108 30)", "oklch(48% 0.144 30)", "oklch(60% 0.122 30)", "oklch(72% 0.089 30)", "oklch(84% 0.057 30)", "oklch(95% 0.027 30)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Home page h1 only, Archivo at 88% width on a 3px ink rule." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, each on a 3px ink rule; 1.6rem in app screens." },
+      "title": { "displayName": "Title", "purpose": "h3 inside entries and panels." },
+      "body": { "displayName": "Body", "purpose": "Latin running text in Urbanist; 16px under 560px." },
+      "body-arabic": { "displayName": "Body (Arabic)", "purpose": "Readex Pro for all Arabic text and headings under :lang(ar)." },
+      "label": { "displayName": "Column Label", "purpose": "Uppercase Latin column headers of the weekly sheet only; no caps or tracking in Arabic." },
+      "numeral": { "displayName": "Numeral", "purpose": "Prices, times, counts and table cells in tabular lining figures." }
+    },
+    "shadows": [
+      { "name": "focus-halo", "value": "0 0 0 3px rgba(176, 148, 98, 0.45)", "purpose": "Input, select and textarea focus indicator only. Not elevation; the system has no elevation shadows." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Default curve: button press, price stamp, ruler marker, row and bar entrances." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "Reserved for on-screen movement between two positions." },
+      { "name": "press", "value": "transform 160ms ease-out; scale(0.97), price tag scale(0.96)", "purpose": "Tactile feedback on buttons, slots and price tags." },
+      { "name": "stamp", "value": "background-color, color 180ms ease-out", "purpose": "Price tag ink fill on row hover." },
+      { "name": "colour-shift", "value": "150ms ease", "purpose": "Hover colour, border and background changes." },
+      { "name": "ruler-slide", "value": "inset-inline-start 220ms ease-out", "purpose": "Quote marker sliding along the shared scale." },
+      { "name": "sheet-in", "value": "opacity + translateY(6px), 420ms ease-out, 45ms stagger per row", "purpose": "Weekly sheet rows entering." },
+      { "name": "bar-in", "value": "scaleX(0.6) + opacity, 480ms ease-out", "purpose": "Day-plan bars entering." },
+      { "name": "reduced-motion", "value": "all animation and transition durations 0.01ms", "purpose": "prefers-reduced-motion: reduce removes every motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "560px" },
+      { "name": "stack", "value": "900px" },
+      { "name": "container", "value": "1180px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid forest-green stamp for the main action of a section.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Find something this weekend</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 8px 18px; border-radius: 2px; border: 1.5px solid #173F35; font-family: 'Urbanist Variable', system-ui, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease, color 150ms ease, border-color 150ms ease; } .ds-btn-primary { background: #173F35; color: #F4F0E8; } .ds-btn-primary:hover { background: #22564A; } .ds-btn:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; } .ds-btn:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Default paper button with green border; secondary actions and toggles.",
+      "html": "<button class=\"ds-btn-outline\">Sign in</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 18px; border-radius: 2px; border: 1.5px solid #173F35; background: #FBF8F2; color: #173F35; font-family: 'Urbanist Variable', system-ui, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease; } .ds-btn-outline:hover { background: #E7DCC6; } .ds-btn-outline:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; } .ds-btn-outline:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent button with a sand-rule border for quiet actions such as language switch and host sign-in.",
+      "html": "<button class=\"ds-btn-ghost\">العربية</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 18px; border-radius: 2px; border: 1.5px solid #CFC3AA; background: transparent; color: #232624; font-family: 'Urbanist Variable', 'Readex Pro Variable', system-ui, sans-serif; font-size: 17px; font-weight: 600; cursor: pointer; transition: border-color 150ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-ghost:hover { border-color: #232624; } .ds-btn-ghost:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; } .ds-btn-ghost:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Paper field with a visible label, field-stroke border and sand focus halo.",
+      "html": "<label class=\"ds-label\">Your quote (KWD)<input class=\"ds-input\" value=\"11.000\"></label>",
+      "css": ".ds-label { display: flex; flex-direction: column; gap: 4px; font-family: 'Urbanist Variable', system-ui, sans-serif; font-weight: 600; font-size: 0.92rem; color: #232624; } .ds-input { font: inherit; font-weight: 400; font-size: 17px; min-height: 44px; padding: 8px 10px; border: 1.5px solid #8F8878; border-radius: 2px; background: #FBF8F2; color: #232624; caret-color: #173F35; transition: border-color 150ms ease, box-shadow 150ms ease; } .ds-input:hover { border-color: #232624; } .ds-input:focus-visible { outline: none; border-color: #173F35; box-shadow: 0 0 0 3px rgba(176, 148, 98, 0.45); }"
+    },
+    {
+      "name": "Masthead Nav",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Ivory masthead nav on a 3px ink rule; the active page carries a green underline that sits on the rule.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-active\">Explore</a><a href=\"#\">Services</a><a href=\"#\">My Plan</a><a href=\"#\">My Bookings</a></nav>",
+      "css": ".ds-nav { display: flex; background: #F4F0E8; border-bottom: 3px solid #232624; padding: 0 8px; overflow-x: auto; } .ds-nav a { padding: 10px 12px 9px; color: #232624; text-decoration: none; white-space: nowrap; font-family: 'Urbanist Variable', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; border-bottom: 3px solid transparent; margin-bottom: -3px; transition: color 150ms ease, border-color 150ms ease; } .ds-nav a:hover { color: #173F35; } .ds-nav a.ds-active { color: #173F35; border-color: #173F35; } .ds-nav a:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Small bordered label; neutral, demo and state variants.",
+      "html": "<span class=\"ds-tags\"><span class=\"ds-tag\">Workshop</span><span class=\"ds-tag ds-tag-demo\">Demo</span><span class=\"ds-tag ds-tag-ok\">Confirmed</span></span>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 6px; } .ds-tag { font-family: 'Urbanist Variable', system-ui, sans-serif; font-size: 0.74rem; padding: 2px 7px; border: 1px solid #CFC3AA; color: #232624; font-weight: 600; letter-spacing: 0.02em; border-radius: 2px; } .ds-tag-demo { border-color: #B09462; color: #6B5328; background: #F3E8CF; } .ds-tag-ok { border-color: #1F5F45; color: #1F5F45; background: #E5EFE7; }"
+    },
+    {
+      "name": "Sheet Entry",
+      "kind": "card",
+      "refersTo": "entry",
+      "description": "A listing entry: no box, a 3px ink top rule, a green title and a ruled facts list.",
+      "html": "<article class=\"ds-entry\"><h3>Arabic calligraphy for beginners</h3><dl class=\"ds-facts\"><div><dt>Area</dt><dd>Salmiya</dd></div><div><dt>Price</dt><dd>KWD 8.000</dd></div></dl></article>",
+      "css": ".ds-entry { padding: 16px 0 20px; border-top: 3px solid #232624; font-family: 'Urbanist Variable', system-ui, sans-serif; color: #232624; max-width: 340px; } .ds-entry h3 { font-family: 'Archivo Variable', system-ui, sans-serif; font-stretch: 88%; font-weight: 750; font-size: 1.1rem; line-height: 1.08; letter-spacing: -0.015em; color: #173F35; margin: 6px 0 10px; } .ds-facts { margin: 0; } .ds-facts div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #CFC3AA; padding: 5px 0; } .ds-facts dt { color: #565A55; font-size: 0.9rem; } .ds-facts dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums lining-nums; }"
+    },
+    {
+      "name": "Weekly Sheet Row",
+      "kind": "custom",
+      "refersTo": "price-tag",
+      "description": "Signature: a dated green strip over ruled rows whose price tag stamps green on hover and presses on tap.",
+      "html": "<div class=\"ds-sheet\"><p class=\"ds-dateline\"><span class=\"ds-stamp\">This weekend</span><span>Thu 19 – Sat 21 Nov</span></p><a href=\"#\" class=\"ds-row\"><span class=\"ds-title\"><strong>Pottery wheel taster</strong><small>Shuwaikh · Arts</small></span><span class=\"ds-when\">Fri 10:00</span><span class=\"ds-price\"><span class=\"ds-tag-price\">KWD 12.000</span><span class=\"ds-unit\">per person</span></span></a><p class=\"ds-fine\">Sample listings. Times are Kuwait time. No payments are taken.</p></div>",
+      "css": ".ds-sheet { background: #FBF8F2; border: 1px solid #CFC3AA; padding: 0 18px 14px; font-family: 'Urbanist Variable', system-ui, sans-serif; color: #232624; max-width: 560px; } .ds-dateline { display: flex; gap: 12px; align-items: center; margin: 0 -18px; padding: 8px 18px; background: #173F35; color: #F4F0E8; font-weight: 600; font-size: 0.95rem; } .ds-stamp { background: #F4F0E8; color: #173F35; padding: 1px 8px; border-radius: 1px; } .ds-row { display: grid; grid-template-columns: minmax(0, 1fr) 6rem auto; gap: 12px; align-items: center; min-height: 56px; padding: 11px 6px; border-bottom: 1px solid #CFC3AA; color: #232624; text-decoration: none; transition: background-color 150ms ease; } .ds-title { display: flex; flex-direction: column; } .ds-title strong { color: #173F35; font-weight: 650; } .ds-title small, .ds-when { font-size: 0.86rem; color: #565A55; font-variant-numeric: tabular-nums; } .ds-price { display: inline-flex; flex-direction: column; align-items: flex-end; gap: 2px; } .ds-tag-price { padding: 3px 8px; border: 1.5px solid #173F35; border-radius: 2px; background: #FBF8F2; color: #173F35; font-weight: 700; font-size: 0.92rem; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; transition: background-color 180ms cubic-bezier(0.23, 1, 0.32, 1), color 180ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-unit { font-size: 0.72rem; font-weight: 600; color: #6B5328; } .ds-row:hover { background: #F4F0E8; } .ds-row:hover .ds-tag-price { background: #173F35; color: #F4F0E8; } .ds-row:active .ds-tag-price { transform: scale(0.96); } .ds-row:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; } .ds-fine { font-size: 0.78rem; color: #565A55; margin: 12px 6px 0; }"
+    },
+    {
+      "name": "Time Slot",
+      "kind": "chip",
+      "refersTo": "slot",
+      "description": "Selectable session time tile; selected fills green, disabled strikes through.",
+      "html": "<div class=\"ds-slots\"><button class=\"ds-slot\">09:00</button><button class=\"ds-slot ds-on\">10:30</button><button class=\"ds-slot\" disabled>12:00</button></div>",
+      "css": ".ds-slots { display: flex; gap: 8px; flex-wrap: wrap; } .ds-slot { min-height: 44px; min-width: 76px; border: 1.5px solid #CFC3AA; background: #FBF8F2; color: #232624; border-radius: 2px; font-family: 'Urbanist Variable', system-ui, sans-serif; font-size: 17px; font-variant-numeric: tabular-nums; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease, border-color 150ms ease; } .ds-slot:hover:not(:disabled) { border-color: #173F35; } .ds-slot:active:not(:disabled) { transform: scale(0.97); } .ds-slot:focus-visible { outline: 3px solid #B09462; outline-offset: 2px; } .ds-slot.ds-on { background: #173F35; color: #F4F0E8; border-color: #173F35; } .ds-slot:disabled { opacity: 0.4; text-decoration: line-through; cursor: not-allowed; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Co-op Weekly Sheet",
+    "overview": "Maydan reads like the honest weekly bulletin a neighbourhood co-op pins by the door: ivory newsprint, charcoal ink, forest-green press bands and stamped date strips, sand rules and unit tags. Information is set as ruled tabular rows, not floated in cards. Every heading sits on a heavy ink rule; every price is set right-aligned in tabular numerals with its unit beside it (\"per person\", \"per unit\"). The sheet persuades by being specific and plainly labelled, never by decoration.\n\nDensity is that of a printed timetable: rows of 48 to 56px, hairline sand rules between them, generous section breaks between topics. Arabic RTL is an equal layout, not a mirror pass: the same rules, the same grid, with Readex Pro and looser leading. The one signature motion is the price tag that \"stamps\" (a quick press and an ink fill) when its row is hovered or pressed; elsewhere motion is short, functional and fully removable.\n\nThere are no photographs, illustrations, gradients or glows. Sample data is always visibly stamped as such; honesty is part of the visual system.",
+    "keyCharacteristics": [
+      "Ivory newsprint ground, charcoal ink type, forest green as the one voice.",
+      "Heavy 3px ink rules under headings and on top of entries; 1px sand rules between rows.",
+      "Tabular, right-aligned prices with an umber unit label underneath.",
+      "Flat surfaces: structure comes from rules and bands, not shadows or cards.",
+      "Narrow-width Archivo headlines against an open, round Urbanist text face; Readex Pro for Arabic.",
+      "Bilingual as equals: logical properties (`inset-inline-start`, `text-align: start`) everywhere."
+    ],
+    "rules": [
+      { "name": "The Pinned Four Rule", "body": "Forest green, ivory, charcoal and sand are pinned by the brand and are not retuned. New hues enter only as state colours (ok, danger) or as washes of the pinned four.", "section": "colors" },
+      { "name": "The One Press Rule", "body": "Forest green is the only solid fill that carries ivory type at size: the primary button, the dateline strip, the stamped price tag, the selected slot. Sand never carries body text; it marks rules, bands and focus.", "section": "colors" },
+      { "name": "The Tabular Figures Rule", "body": "Every price, time, count, reference and table cell uses `tabular-nums lining-nums`, and prices align to the inline end of their column.", "section": "typography" },
+      { "name": "The Arabic Equal Rule", "body": "Under `:lang(ar)` headings switch to Readex Pro at 650, normal width, 0 tracking, 1.35 leading; body goes to 16.5px at 1.7; uppercase and tracking are dropped from labels. Arabic is never set in Archivo or in caps styling.", "section": "typography" },
+      { "name": "The 44 Rule", "body": "Every interactive target is at least 44px tall (sheet rows 56px, day-plan rows 48px, small buttons 36px only in dense app tables).", "section": "layout" },
+      { "name": "The Printed Page Rule", "body": "Surfaces are flat. If something needs to stand apart, give it paper stock, a sand hairline and a top band; never a shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** put a 3px charcoal rule under every section heading and on top of every entry.",
+      "**Do** set prices right-aligned in tabular figures with their unit (\"per person\", \"per unit\") in umber beneath.",
+      "**Do** use the supplied MAYDAN wordmark as supplied, proportions kept, at 36px tall (30px on phones).",
+      "**Do** stamp sample data visibly (demo banner, demo tags, fine print) on every surface that shows it.",
+      "**Do** keep every interactive target at least 44px tall and every focus state a visible 3px sand outline.",
+      "**Do** use logical properties so Arabic RTL renders as an equal layout.",
+      "**Do** wrap all motion so `prefers-reduced-motion` removes it, and keep transitions between 150ms and 480ms on the ease-out curve."
+    ],
+    "donts": [
+      "**Don't** add box shadows for elevation; use paper stock, a sand hairline and a top band.",
+      "**Don't** introduce new hues beyond the pinned four, their washes and the two state colours.",
+      "**Don't** use invented photographs, testimonials, statistics or partner logos; the system has no imagery slot for them.",
+      "**Don't** set Arabic in Archivo, in uppercase styling or with letter-spacing.",
+      "**Don't** round corners beyond 2px.",
+      "**Don't** mark selection or emphasis with a coloured side stripe on one edge; use a full inset outline or a fill.",
+      "**Don't** put small uppercase labels above headings; uppercase is reserved for table column headers."
+    ]
+  }
+}

@@ -1,26 +1,28 @@
 /* Maydan: the co-op weekly sheet. Ivory newsprint, charcoal ink, forest-green press bands, sand rules.
-   Brand colours are pinned (PRODUCT.md). Type: Urbanist (Latin), Readex Pro (Arabic), self-hosted. */
+   Brand colours are pinned (PRODUCT.md). Type, self-hosted: Archivo (headings, ~88% width), Urbanist (Latin text), Readex Pro (Arabic). */
 :root {
   --green: #173F35; --green-2: #22564A; --ivory: #F4F0E8; --paper: #FBF8F2; --ink: #232624; --sand: #B09462;
   --sand-soft: #E7DCC6; --rule: #CFC3AA; --muted: #565A55; --danger: #9B2C1F; --ok: #1F5F45; --warn-bg: #F3E8CF;
   --font: "Urbanist Variable", "Readex Pro Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Archivo Variable", "Readex Pro Variable", system-ui, sans-serif;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --r: 2px;
   font-family: var(--font); font-size: 17px; line-height: 1.55; color: var(--ink); background: var(--ivory);
   font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
 }
-:root:lang(ar) { --font: "Readex Pro Variable", "Urbanist Variable", system-ui, sans-serif; font-size: 16.5px; line-height: 1.7; }
+:root:lang(ar) { --font: "Readex Pro Variable", "Urbanist Variable", system-ui, sans-serif; --display: "Readex Pro Variable", system-ui, sans-serif; font-size: 16.5px; line-height: 1.7; }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body { overflow-x: hidden; background: var(--ivory); }
 ::selection { background: var(--green); color: var(--ivory); }
 input, textarea { caret-color: var(--green); }
 html { scrollbar-color: var(--sand) var(--ivory); }
-h1, h2, h3 { font-weight: 600; color: var(--green); line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; margin: 0.4rem 0 0.6rem; }
+h1, h2, h3 { font-family: var(--display); font-weight: 750; font-stretch: 88%; color: var(--green); line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; margin: 0.4rem 0 0.6rem; }
+:lang(ar) h1, :lang(ar) h2, :lang(ar) h3 { font-weight: 650; font-stretch: normal; }
 :lang(ar) h1, :lang(ar) h2, :lang(ar) h3 { letter-spacing: 0; line-height: 1.35; }
 h1 { font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.6rem); }
-h2 { font-size: 1.4rem; }
+h2 { font-size: 1.6rem; }
 h3 { font-size: 1.1rem; }
 p { margin: 0.5rem 0; text-wrap: pretty; }
 a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
@@ -105,8 +107,7 @@ bdi { unicode-bidi: isolate; white-space: nowrap; }
 .session { flex-direction: row; align-items: center; gap: 12px; padding: 12px 8px; border-bottom: 1px solid var(--rule); font-weight: 500; cursor: pointer;
   transition: background-color 150ms ease; }
 @media (hover: hover) and (pointer: fine) { .session:hover { background: var(--paper); } }
-.session.on { background: #E5EFE7; box-shadow: inset 3px 0 0 var(--green); }
-:dir(rtl) .session.on, [dir='rtl'] .session.on { box-shadow: inset -3px 0 0 var(--green); }
+.session.on { background: #E5EFE7; outline: 2px solid var(--green); outline-offset: -2px; }
 .slots { border: 0; padding: 0; margin: 12px 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .slots legend { font-weight: 700; padding: 0; margin-bottom: 6px; }
 .slot { min-height: 44px; min-width: 76px; border: 1.5px solid var(--rule); background: var(--paper); font: inherit; cursor: pointer; border-radius: var(--r);
@@ -126,20 +127,22 @@ th { border-bottom: 2px solid var(--ink); font-size: 0.86rem; }
 .block.flexible { border-top-color: var(--sand); }
 
 /* ---------- home: the weekly sheet ---------- */
-.home > section { padding: 28px 0 44px; }
-.home > section + section { border-top: 3px solid var(--ink); }
+.home > section { padding: 32px 0 56px; }
+.home h2 { font-size: clamp(1.75rem, 1.3rem + 1.2vw, 2.35rem); padding-bottom: 10px; border-bottom: 3px solid var(--ink); margin-bottom: 14px; }
 .home-hero { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: start; padding-top: 12px !important; }
-.home-hero h1 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3.1rem); margin-top: 14px; }
+.home-hero h1 { font-size: clamp(2.3rem, 1.4rem + 3vw, 3.9rem); margin-top: 6px; padding-bottom: 14px; border-bottom: 3px solid var(--ink); }
+.quiet-link { font-weight: 600; padding: 10px 4px; min-height: 44px; display: inline-flex; align-items: center; }
 .home-hero .lead { font-size: 1.08rem; color: #3A3E3A; max-width: 44ch; }
-.stamp-strip { display: inline-flex; flex-wrap: wrap; row-gap: 4px; align-items: center; gap: 10px; margin: 6px 0 0; padding: 5px 12px 5px 5px; background: var(--green); color: var(--ivory);
-  font-weight: 600; font-size: 0.92rem; border-radius: var(--r); }
-:dir(rtl) .stamp-strip, [dir='rtl'] .stamp-strip { padding: 5px 5px 5px 12px; }
-.stamp-strip span { white-space: nowrap; background: var(--ivory); color: var(--green); padding: 1px 8px; border-radius: 1px; }
-.sheet { background: var(--paper); border: 1px solid var(--rule); border-top: 6px solid var(--green); padding: 4px 18px 14px; }
-.sheet-head, .sheet-row { display: grid; grid-template-columns: minmax(0, 1fr) 9.5rem 3.6rem 6.4rem; gap: 12px; align-items: center; }
+.sheet-dateline { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0 -18px; padding: 8px 18px; background: var(--green); color: var(--ivory); font-weight: 600; font-size: 0.95rem; }
+.sheet-dateline .stamp { background: var(--ivory); color: var(--green); padding: 1px 8px; border-radius: 1px; white-space: nowrap; }
+.sheet { background: var(--paper); border: 1px solid var(--rule); padding: 0 18px 14px; }
+.sheet-head, .sheet-row { display: grid; grid-template-columns: minmax(0, 1fr) 9.5rem 3.6rem 7rem; gap: 12px; align-items: center; }
 .sheet-head { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); padding: 10px 6px 8px; border-bottom: 2px solid var(--ink); }
 :lang(ar) .sheet-head { text-transform: none; letter-spacing: 0; }
-.sheet-head .num, .sheet-row .tag-price { justify-self: end; }
+.sheet-head .num, .sheet-row .price-cell { justify-self: end; }
+.price-cell { display: inline-flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.unit { white-space: nowrap; font-size: 0.72rem; font-weight: 600; color: #6B5328; letter-spacing: 0.02em; }
+.sheet-rows li:nth-child(even) .sheet-row { background: rgba(231, 220, 198, 0.28); }
 .sheet-rows { list-style: none; margin: 0; padding: 0; }
 .sheet-rows li { border-bottom: 1px solid var(--rule); animation: sheet-in 420ms var(--ease-out) both; animation-delay: calc(var(--i) * 45ms); }
 @keyframes sheet-in { from { opacity: 0; transform: translateY(6px); } }
@@ -186,14 +189,16 @@ th { border-bottom: 2px solid var(--ink); font-size: 0.86rem; }
   color: var(--ink); text-decoration: none; transition: background-color 150ms ease; }
 .day-list a > .num:first-child { color: var(--muted); font-size: 0.88rem; }
 .day-list strong { color: var(--green); font-weight: 650; }
-.day-list .tag-price { justify-self: end; }
+.day-list .price-cell { justify-self: end; }
 .day-list a:active .tag-price { transform: scale(0.96); }
+.home-close { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: start; }
+.billing { margin: 6px 0 0; border-top: 3px solid var(--ink); font-size: 0.92rem; }
+.billing div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 12px; padding: 8px 2px; border-bottom: 1px solid var(--rule); }
+.billing dt { font-weight: 700; color: var(--green); } .billing dd { margin: 0; color: #3A3E3A; }
 @media (hover: hover) and (pointer: fine) { .day-list a:hover { background: var(--ivory); } .day-list a:hover .tag-price { background: var(--green); color: var(--ivory); } }
-.home-close { text-align: start; }
-.home-close p { max-width: 60ch; }
 
 @media (max-width: 900px) {
-  .home-hero, .home-band, .home-plan { grid-template-columns: 1fr; gap: 24px; }
+  .home-hero, .home-band, .home-plan, .home-close { grid-template-columns: 1fr; gap: 24px; }
 }
 @media (max-width: 560px) {
   :root { font-size: 16px; }
@@ -205,7 +210,8 @@ th { border-bottom: 2px solid var(--ink); font-size: 0.86rem; }
   .sheet { padding: 2px 12px 12px; margin-inline: -4px; }
   .sheet-head { display: none; }
   .sheet-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'title price' 'when left'; row-gap: 2px; }
-  .sheet-title { grid-area: title; } .sheet-row .tag-price { grid-area: price; }
+  .sheet-dateline { margin: 0 -12px; padding: 8px 12px; }
+  .sheet-title { grid-area: title; } .sheet-row .price-cell { grid-area: price; }
   .sheet-when { grid-area: when; } .sheet-left { grid-area: left; justify-self: end; }
   .day-list a { grid-template-columns: minmax(0, 1fr) auto; }
   .day-list a > .num:first-child { grid-column: 1 / -1; }

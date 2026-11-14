@@ -59,7 +59,7 @@ export default function Home() {
         out.push({ listing: l, starts_at: o.starts_at, ends_at: o.ends_at, left: o.capacity - o.booked_count, capacity: o.capacity, occId: o.id })
       }
     }
-    return out.sort((a, b) => a.starts_at.localeCompare(b.starts_at)).slice(0, 6)
+    return out.sort((a, b) => a.starts_at.localeCompare(b.starts_at)).slice(0, 5)
   }, [listings, weekend])
 
   // A sample Friday, drawn by the same rules as "Surprise me" (deterministic so it does not jump on reload).
@@ -100,17 +100,17 @@ export default function Home() {
     <div className="home">
       <section className="home-hero" aria-labelledby="home-h1">
         <div className="hero-copy">
-          <p className="stamp-strip"><span>{L('This weekend', 'هذا الأسبوع')}</span>{range}</p>
-          <h1 id="home-h1">{L('Things to do in Kuwait this weekend, with real places and prices.', 'أنشطة في الكويت هذا الأسبوع، بأماكن وأسعار حقيقية.')}</h1>
+          <h1 id="home-h1">{L('Things to do in Kuwait this weekend, ready to book.', 'أنشطة في الكويت هذا الأسبوع، جاهزة للحجز.')}</h1>
           <p className="lead">{L('Reserve a seat at a local workshop, check a service quote like for like, and plan your free time in one place.',
             'احجز مقعدك في ورشة محلية، وقارن عرض سعر خدمة بما يماثله، وخطّط لوقت فراغك في مكان واحد.')}</p>
           <div className="row">
             <Link className="btn primary" to="/explore">{L('Find something this weekend', 'ابحث عن نشاط هذا الأسبوع')}</Link>
-            <Link className="btn ghost" to="/services">{L('Check a quote', 'تحقّق من عرض سعر')}</Link>
+            <Link className="quiet-link" to="/services">{L('Or check a service quote', 'أو تحقّق من عرض سعر خدمة')}</Link>
           </div>
         </div>
 
         <div className="sheet" aria-label={L('This weekend’s sheet', 'جدول هذا الأسبوع')}>
+          <p className="sheet-dateline"><span className="stamp">{L('This weekend', 'هذا الأسبوع')}</span><span>{range}</span></p>
           <div className="sheet-head" aria-hidden="true">
             <span>{L('Activity', 'النشاط')}</span><span>{L('When', 'الموعد')}</span><span>{L('Left', 'متبقٍ')}</span><span className="num">{L('Price', 'السعر')}</span>
           </div>
@@ -124,7 +124,7 @@ export default function Home() {
                   <span className="sheet-title"><strong>{title(r.listing)}</strong><small>{label(r.listing.area)} · {label(r.listing.category)}</small></span>
                   <span className="sheet-when">{dateTime(r.starts_at)}</span>
                   <span className="sheet-left">{r.left > 0 ? `${r.left}/${r.capacity}` : L('Full', 'مكتمل')}</span>
-                  <span className="tag-price num">{Number(r.listing.price_amount) === 0 ? L('Free', 'مجاناً') : money(Number(r.listing.price_amount), r.listing.price_currency)}</span>
+                  <span className="price-cell"><span className="tag-price num">{Number(r.listing.price_amount) === 0 ? L('Free', 'مجاناً') : money(Number(r.listing.price_amount), r.listing.price_currency)}</span>{Number(r.listing.price_amount) > 0 && <span className="unit">{L('per person', 'للشخص')}</span>}</span>
                 </Link>
               </li>
             ))}
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="ruler-panel">
           {ruler ? (
             <>
-              <p className="ruler-title"><strong>{ruler.name}</strong> · {L('one standard split unit, call-out included', 'وحدة سبليت واحدة، شاملة رسوم الزيارة')}</p>
+              <p className="ruler-title"><strong>{ruler.name}</strong> · {L('one standard split unit, call-out included', 'وحدة سبليت واحدة، شاملة رسوم الزيارة')} <span className="unit">{L('per unit', 'للوحدة')}</span></p>
               <label className="ruler-input">{L('Your quote (KWD)', 'عرضك (د.ك)')}
                 <input type="range" min={3} max={16} step={0.5} value={quote} onChange={e => setQuote(Number(e.target.value))} />
               </label>
@@ -169,8 +169,8 @@ export default function Home() {
       <section className="home-plan" aria-labelledby="plan-h2">
         <div className="band-copy">
           <h2 id="plan-h2">{L('Turn a free Friday into a plan that fits.', 'حوّل يوم الجمعة إلى خطة تناسبك.')}</h2>
-          <p>{L(`Tell Maydan your interests, budget and free hours. It builds a plan from real sessions, keeps ${bufferMinutes} minutes between venues and checks ages and places. Nothing is reserved until you book each item.`,
-            `أخبر ميدان باهتماماتك وميزانيتك وساعات فراغك. يبني خطة من جلسات حقيقية، ويترك ${bufferMinutes} دقيقة بين الأماكن ويتحقق من الأعمار والمقاعد. لا يُحجز شيء حتى تحجز كل عنصر.`)}</p>
+          <p>{L(`Tell Maydan your interests, budget and free hours. It builds a plan from listed sessions, keeps ${bufferMinutes} minutes between venues and checks ages and places. Nothing is reserved until you book each item.`,
+            `أخبر ميدان باهتماماتك وميزانيتك وساعات فراغك. يبني خطة من الجلسات المدرجة، ويترك ${bufferMinutes} دقيقة بين الأماكن ويتحقق من الأعمار والمقاعد. لا يُحجز شيء حتى تحجز كل عنصر.`)}</p>
           <Link className="btn primary" to="/plan">{L('Plan my weekend', 'خطّط لعطلتي')}</Link>
         </div>
         <div className="day-plan">
@@ -187,7 +187,7 @@ export default function Home() {
                 <Link to={`/listing/${c.listing_id}?occ=${c.occurrence_id}`}>
                   <span className="num">{time(c.starts_at)}–{time(c.ends_at)}</span>
                   <strong>{title(c)}</strong>
-                  <span className="tag-price num">{c.price_amount === 0 ? L('Free', 'مجاناً') : money(c.price_amount, c.price_currency)}</span>
+                  <span className="price-cell"><span className="tag-price num">{c.price_amount === 0 ? L('Free', 'مجاناً') : money(c.price_amount, c.price_currency)}</span>{c.price_amount > 0 && <span className="unit">{L('per person', 'للشخص')}</span>}</span>
                 </Link>
               </li>
             ))}
@@ -199,10 +199,20 @@ export default function Home() {
       </section>
 
       <section className="home-close" aria-labelledby="close-h2">
+        <div className="band-copy">
         <h2 id="close-h2">{L('Run workshops or classes in Kuwait?', 'تنظّم ورشاً أو دورات في الكويت؟')}</h2>
         <p>{L('Hosts publish sessions, see who is coming, mark attendance and print a QR code for their listing. Host access is given by the Maydan team.',
           'ينشر المنظّمون جلساتهم، ويرون المشاركين، ويسجّلون الحضور، ويطبعون رمز QR لنشاطهم. يمنح فريق ميدان صلاحية المنظّم.')}</p>
         <Link className="btn ghost" to="/signin?next=/host">{L('Sign in as a host', 'سجّل الدخول كمنظّم')}</Link>
+        </div>
+        <dl className="billing">
+          <div><dt>{L('Publish', 'النشر')}</dt><dd>{L('Activities with sessions, places, ages and a price in KWD', 'أنشطة بجلسات ومقاعد وأعمار وسعر بالدينار')}</dd></div>
+          <div><dt>{L('Participants', 'المشاركون')}</dt><dd>{L('Names and age bands for your own listings only', 'الأسماء والفئات العمرية لأنشطتك فقط')}</dd></div>
+          <div><dt>{L('Attendance', 'الحضور')}</dt><dd>{L('Marked by you on the day, saved per booking', 'تسجّله بنفسك يوم النشاط، ويُحفظ لكل حجز')}</dd></div>
+          <div><dt>{L('QR code', 'رمز QR')}</dt><dd>{L('Links to your public listing page', 'يقود إلى صفحة نشاطك العامة')}</dd></div>
+          <div><dt>{L('Access', 'الصلاحية')}</dt><dd>{L('Granted by the Maydan team; it cannot be self-assigned', 'يمنحها فريق ميدان ولا يمكن منحها ذاتياً')}</dd></div>
+          <div><dt>{L('Pilot', 'التجربة')}</dt><dd>{L('Demo hosts only; no payments or fees', 'منظّمون تجريبيون فقط؛ بلا مدفوعات أو رسوم')}</dd></div>
+        </dl>
       </section>
     </div>
   )
